@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://minersonline.uk/blog</id>
+    <title>Miners Online Blog</title>
+    <updated>2024-10-04T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://minersonline.uk/blog"/>
+    <subtitle>Miners Online Blog</subtitle>
+    <icon>https://minersonline.uk/img/favicon.png</icon>
+    <entry>
+        <title type="html"><![CDATA[Another new website ...]]></title>
+        <id>https://minersonline.uk/blog/another-new-website</id>
+        <link href="https://minersonline.uk/blog/another-new-website"/>
+        <updated>2024-10-04T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[We have made a new website again! This time built with Docusaurus.]]></summary>
+        <content type="html"><![CDATA[<p>We have made a new website again! This time built with Docusaurus.</p>]]></content>
+        <author>
+            <name>Samuel Hulme</name>
+            <uri>https://github.com/ajh123</uri>
+        </author>
+        <category label="miners-online" term="miners-online"/>
+        <category label="meta" term="meta"/>
+    </entry>
+</feed>
