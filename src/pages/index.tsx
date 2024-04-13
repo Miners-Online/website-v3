@@ -22,12 +22,22 @@ function HomepageHeader() {
 }
 
 export default function Home(): JSX.Element {
+  const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
       title={`Home`}
-      description="Welcome to Miners Online!">
+      description={siteConfig.tagline}>
       <HomepageHeader />
       <main>
+        <div className="container">
+          <Heading as="h2">Who are we?</Heading>
+          <p>Welcome to Miners Online, a Minecraft server founded and operated by the President of Samland. It serves as the virtual home for the Samland Government, a sovereign entity existing within the Minecraft worlds provided by us.</p>
+          <Link
+            className="button button--secondary button--lg"
+            to="/docs/miners_online/intro">
+            More about us.
+          </Link>
+        </div>
         <HomepageFeatures />
       </main>
     </Layout>

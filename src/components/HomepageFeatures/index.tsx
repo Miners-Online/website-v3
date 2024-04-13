@@ -17,7 +17,12 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/favicon.svg').default,
     description: (
       <>
-        Play games with your friends and join our Minecraft server! Read more at the <Link to="/docs/miners_online_server/intro">documentation</Link> ...
+        Play games with your friends and join our Minecraft server!
+        <Link
+          className="button button--secondary button--lg"
+          to="/docs/miners_online_server/intro">
+          Play now.
+        </Link>
       </>
     ),
   },
@@ -39,14 +44,15 @@ function Feature({title, href, Svg, description}: FeatureItem) {
 
 export default function HomepageFeatures(): JSX.Element {
   return (
-    <section className={styles.features}>
-      <div className="container">
+    <div className="container">
+      <Heading as="h2">Projects and services</Heading>
+      <section className={styles.features}>
         <div className="row">
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
           ))}
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 }

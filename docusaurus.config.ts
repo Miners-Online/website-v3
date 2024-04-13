@@ -4,7 +4,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'Miners Online',
-  tagline: 'Documentation for Miners Online',
+  tagline: 'Documentation for Miners Online, the virtual home for the Samland Government, and our open source software.',
   favicon: 'img/favicon.png',
 
   // Set the production url of your site here
@@ -35,10 +35,10 @@ const config: Config = {
       'classic',
       {
         docs: {
-          id: 'miners_online_server',
-          sidebarPath: './sidebarsMinersOnlineServer.ts',
-          path: 'docs/miners_online_server',
-          routeBasePath: 'docs/miners_online_server',
+          id: 'miners_online',
+          sidebarPath: './sidebars.ts',
+          path: 'docs/miners_online',
+          routeBasePath: 'docs/miners_online',
           editUrl:
             'https://github.com/Miners-Online/website-v3/tree/main/',
         },
@@ -56,6 +56,20 @@ const config: Config = {
     ],
   ],
 
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'miners_online_server',
+        sidebarPath: './sidebars.ts',
+        path: 'docs/miners_online_server',
+        routeBasePath: 'docs/miners_online_server',
+        editUrl:
+          'https://github.com/Miners-Online/website-v3/tree/main/',
+      },
+    ],
+  ],
+
   themeConfig: {
     // Replace with your project's social card
     image: 'img/favicon.png',
@@ -66,12 +80,7 @@ const config: Config = {
         src: 'img/favicon.png',
       },
       items: [
-        // {
-        //   type: 'docSidebar',
-        //   sidebarId: 'tutorialSidebar',
-        //   position: 'left',
-        //   label: 'Tutorial',
-        // },
+        {to: '/docs/miners_online/intro', label: 'About Us', position: 'left'},
         {to: '/docs/miners_online_server/intro', label: 'Minecraft Server', position: 'left'},
         {to: '/blog', label: 'Blog', position: 'left'},
         {
