@@ -46,6 +46,8 @@ const config: Config = {
           showReadingTime: true,
           editUrl:
             'https://github.com/Miners-Online/website-v3/tree/main/',
+          showLastUpdateTime: true,
+          showLastUpdateAuthor: true,
         },
         theme: {
           customCss: './src/css/custom.css',
