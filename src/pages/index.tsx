@@ -1,11 +1,15 @@
+'use client';
 import clsx from 'clsx';
-import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import Heading from '@theme/Heading';
 
 import styles from './index.module.css';
+
+
+import { Button, Link } from '@carbon/react';
+
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
@@ -32,11 +36,9 @@ export default function Home(): JSX.Element {
         <div className="container">
           <Heading as="h2">Who are we?</Heading>
           <p>Welcome to Miners Online, a Minecraft server founded and operated by the President of Samland. It serves as the virtual home for the Samland Government, a sovereign entity existing within the Minecraft worlds provided by us.</p>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/miners_online/intro">
+          <Button href='/docs/miners_online/intro'>
             More about us.
-          </Link>
+          </Button>
         </div>
         <HomepageFeatures />
       </main>
