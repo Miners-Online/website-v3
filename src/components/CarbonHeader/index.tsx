@@ -15,6 +15,7 @@ import {
     SideNav,
     SideNavItems,
     HeaderSideNavItems,
+    Theme,
 } from '@carbon/react';
 import CarbonHeaderLink from '../CarbonHeaderLink';
 
@@ -32,49 +33,51 @@ export default function CarbonHeader () {
     const logoLink = useBaseUrl(logo?.href || '/');
 
     return (
-        <HeaderContainer
-            render={({ isSideNavExpanded, onClickSideNavExpand }) => (
-            <Header aria-label={navbarTitle}>
-                <SkipToContent />
-                <HeaderMenuButton
-                    aria-label="Open menu"
-                    onClick={onClickSideNavExpand}
-                    isActive={isSideNavExpanded}
-                />
-                <HeaderName href={logoLink} prefix="">
-                {navbarTitle}
-                </HeaderName>
-                <HeaderNavigation aria-label={navbarTitle}>
-                    {items.map((item, i) => (
-                        <CarbonHeaderLink {...item}/>
-                    ))}
-                </HeaderNavigation>
-                <SideNav
-                    aria-label="Side navigation"
-                    expanded={isSideNavExpanded}
-                    isPersistent={false}
-                >
-                    <SideNavItems>
-                        <HeaderSideNavItems>
-                            {items.map((item, i) => (
-                                <CarbonHeaderLink {...item}/>
-                            ))}
-                        </HeaderSideNavItems>
-                    </SideNavItems>
-                </SideNav>
-                <HeaderGlobalBar>
-                <HeaderGlobalAction aria-label="Notifications" tooltipAlignment="center">
-                    <Notification size={20} />
-                </HeaderGlobalAction>
-                <HeaderGlobalAction aria-label="User Avatar" tooltipAlignment="center">
-                    <UserAvatar size={20} />
-                </HeaderGlobalAction>
-                <HeaderGlobalAction aria-label="App Switcher" tooltipAlignment="end">
-                    <Switcher size={20} />
-                </HeaderGlobalAction>
-                </HeaderGlobalBar>
-            </Header>
-            )}
-        />
+        <Theme theme='g100'>
+            <HeaderContainer
+                render={({ isSideNavExpanded, onClickSideNavExpand }) => (
+                <Header aria-label={navbarTitle}>
+                    <SkipToContent />
+                    <HeaderMenuButton
+                        aria-label="Open menu"
+                        onClick={onClickSideNavExpand}
+                        isActive={isSideNavExpanded}
+                    />
+                    <HeaderName href={logoLink} prefix="">
+                    {navbarTitle}
+                    </HeaderName>
+                    <HeaderNavigation aria-label={navbarTitle}>
+                        {items.map((item, i) => (
+                            <CarbonHeaderLink {...item}/>
+                        ))}
+                    </HeaderNavigation>
+                    <SideNav
+                        aria-label="Side navigation"
+                        expanded={isSideNavExpanded}
+                        isPersistent={false}
+                    >
+                        <SideNavItems>
+                            <HeaderSideNavItems>
+                                {items.map((item, i) => (
+                                    <CarbonHeaderLink {...item}/>
+                                ))}
+                            </HeaderSideNavItems>
+                        </SideNavItems>
+                    </SideNav>
+                    <HeaderGlobalBar>
+                    <HeaderGlobalAction aria-label="Notifications" tooltipAlignment="center">
+                        <Notification size={20} />
+                    </HeaderGlobalAction>
+                    <HeaderGlobalAction aria-label="User Avatar" tooltipAlignment="center">
+                        <UserAvatar size={20} />
+                    </HeaderGlobalAction>
+                    <HeaderGlobalAction aria-label="App Switcher" tooltipAlignment="end">
+                        <Switcher size={20} />
+                    </HeaderGlobalAction>
+                    </HeaderGlobalBar>
+                </Header>
+                )}
+            />
+        </Theme>
     )
 }
