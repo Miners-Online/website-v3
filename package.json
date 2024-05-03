@@ -15,7 +15,6 @@
     "typecheck": "tsc"
   },
   "dependencies": {
-    "custom-loaders": "file:plugins/custom-loaders",
     "@carbon/icons-react": "^11.40.0",
     "@carbon/react": "^1.56.0",
     "@docusaurus/core": "3.2.1",
@@ -24,7 +23,6 @@
     "@mdx-js/react": "^3.0.0",
     "clsx": "^2.0.0",
     "docusaurus-plugin-sass": "^0.2.5",
-    "gatsby-theme-carbon": "^3.4.19",
     "prism-react-renderer": "^2.3.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",

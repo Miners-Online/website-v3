@@ -57,7 +57,6 @@ const config: Config = {
   ],
 
   plugins: [
-    'custom-loaders',
     'docusaurus-plugin-sass',
     [
       '@docusaurus/plugin-content-docs',

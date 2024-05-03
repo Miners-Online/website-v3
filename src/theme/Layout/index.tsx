@@ -21,6 +21,7 @@ import ErrorPageContent from '@theme/ErrorPageContent';
 import type {Props} from '@theme/Layout';
 import styles from '@docusaurus/theme-classic/src/theme/Layout/styles.module.css';
 import CarbonHeader from '@site/src/components/CarbonHeader';
+import { Theme } from '@carbon/react';
 
 export default function Layout(props: Props): JSX.Element {
   const {
@@ -40,7 +41,9 @@ export default function Layout(props: Props): JSX.Element {
 
       <AnnouncementBar />
 
-      <CarbonHeader/>
+      <Theme theme='g100'>
+        <CarbonHeader/>
+      </Theme>
 
       <div
         id={SkipToContentFallbackId}
